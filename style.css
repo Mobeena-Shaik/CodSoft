@@ -1,260 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
 
-.Rich-cuisine-logo{
-  width: 80px;
-  height: 70px;
+body {
+    font-family: sans-serif;
 }
-#navItem1{
-  color: #D49137;
-  font-family: "Roboto";
-  font-weight:  bold;
-  font-size: 20px;
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
-#navItem2{
-  color: #D49137;
-  font-family: "Roboto";
-  font-weight:  bold;
-  font-size: 20px;
+
+body {
+    background-image: url("https://wallpapers.com/images/hd/mathematics-background-j0i1i6p5uvz1krhb.jpg");
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #1e1717;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #b5d8ee;
+}
+
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #6a5f5f;
+    z-index: -1;
+}
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 40px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+}
+
+/* light theme */
+
+.calculator {
+    background-color: #ffffff;
+}
+
+.calculator #display {
+    color: #ee1cc7;
+}
+
+.calculator button#clear {
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculator button.btn-number {
+    background-color: #c3eaff;
+    color: #ee1cc7;
+}
+
+.calculator button.btn-operator {
+    background-color: #ffd0fb;
+    color: #ee1cc7;
+  }
   
-}
-#navItem3{
-  color: #D49137;
-  font-family: "Roboto";
-  font-weight:  bold;
-  font-size: 20px;
-}
-#navItem4{
-  color: #D49137;
-  font-family: "Roboto";
-  font-weight:  bold;
-  font-size: 20px;
-}
-.banner-caption{
-  color: #f5f7fa;
-  font-family: "Roboto";
-  font-size: 24px;
-  font-weight: 300;
-}
-.banner-heading {
-  color: white;
-  font-family: "Roboto";
-  font-size: 45px;
-  font-weight: 300;
-}
-.banner-section-bg-container {
-  background-image: url("https://wallpapers.com/images/hd/food-4k-jx0j7rqea6yv9phh.jpg");
-  background-size: cover;
-  height: 100vh;
-}
-.custom-outline-button {
-  width: 130px;
-  height: 45px;
-  color: #d0b200;
-  background-color: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d0b200;
-  border-radius: 8px;
-}
-.custom-button {
-  width: 130px;
-  height: 45px;
-  color: white;
-  background-color: #FFA500;
-  border-width: 0;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-.aboutus-section-description {
-  font-family: "Roboto";
-  font-size: 16px;
-  color: #5a7184;
-}
-.wcu-card-description {
-  font-family: "Roboto";
-  font-size: 16px;
-  color: #7b8794;
-}
-.wcu-card-title {
-  font-family: "Roboto";
-  font-weight: 500;
-  font-size: 22px;
-  color: #323f4b;
-}
-.wcu-image {
-  height: 90px;
-  width: 87px;
-}
-.wcu-card{
-  background-color: white;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e5eaf4;
-  border-radius: 16px;
-}
-.wcu-section-description {
-  font-family: "Roboto";
-  font-size: 16px;
-  color: #5a7184;
-}
-.wcu-section-heading {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 28px;
-  color: #183b56;
-}
-.wcu-section {
-  background-color: #f9fbfe;
-}
-.explore-menu-section {
-  background-color: white;
-}
-.menu-section-heading {
-  color: #183b56;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: 700;
-}
-.menu-item-image {
-  border-radius: 16px;
-}
-.menu-card-title {
-  color: #323f4b;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 24px;
-}
-.menu-item-link {
-  color: #d0b200;
-  font-family: "Roboto";
-  font-size: 14px;
-  font-weight: 500;
-}
-.menu-item-card {
-  border-radius: 16px;
-}
-.offers {
-  color: #323f4b;
-  font-weight: 600;
-  font-style: italic;
-}
-.healthy-food-section {
-  background-color: #f9fbfe;
-}
-.healthy-food-section-img {
-  width: 270px;
-}
-.healthy-food-section-heading {
-  color: #183b56;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: 700;
-}
-.healthy-food-section-description {
-  color: #5a7184;
-  font-family: "Roboto";
-  font-size: 16px;
-}
-.custom-button {
-  color: white;
-  background-color: #d0b200;
-  width: 130px;
-  height: 45px;
-  border-width: 0;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-.delivery-and-payment-section {
-  background-color: white;
-}
-.delivery-and-payment-section-img {
-  width: 270px;
-}
-.delivery-and-payment-section-heading {
-  color: #183b56;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: 700;
-}
-.delivery-and-payment-section-description {
-  color: #5a7184;
-  font-family: "Roboto";
-  font-size: 16px;
-}
-.payment-card-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 28px;
-}
-.custom-button {
-  color: white;
-  background-color: #d0b200;
-  width: 130px;
-  height: 45px;
-  border-width: 0;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-.thanking-customers-section {
-  background-color: #d0b2001a;
-}
-.thanking-customers-section-heading {
-  color: #183b56;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: 700;
-}
-.thanking-customers-section-description {
-  color: #5a7184;
-  font-family: "Roboto";
-  font-size: 16px;
-}
-.thanking-customers-section-img {
-  width: 270px;
-  margin-bottom: 20px;
-}
-.custom-button {
-  color: white;
-  background-color: #d0b200;
-  width: 130px;
-  height: 45px;
-  border-width: 0;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-.follow-us-section {
-    background-color: white;
-}
-.follow-us-section-heading {
-  text-align: center;
-  color: #183b56;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: 700;
-}
-.follow-us-icon-container {
-  background-color: #faf7e8;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
-  margin: 15px;
-  padding-top: 22px;
-  padding-bottom: 14px;
-  padding-right: 16px;
-  padding-left: 22px;
-}
-.icon {
-  color: #d0b200;
-  font-size: 35px;
-}
+  .calculator button.btn-equal {
+    background-color: #adf9e7;
+    color: #ee1cc7;
+  }
 
+  /* dark theme */
 
+  .calculator.dark {
+    background-color: #f5a16a;
+  }
 
+  .calculator.dark #display {
+    color: #130710;
+  }
 
+  .calculator.dark button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+  }
 
+  .calculator.dark button.btn-number {
+    background-color: #1b2f38;
+    color: #f8fafb;
+  }
 
-
-
-
+  .calculator.dark button.btn-operator {
+    background-color: #2e1f39;
+    color: #aa00a4;
+  }
+  
+  .calculator.dark button.btn-equal {
+    background-color: #223323;
+    color: #ffffff;
+  }
+  
