@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.certifications {
+   
+    background-color: black;
+    padding: 70px;
+}
+
+.certifications h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ce97f1;
+    font-size: 40px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.cert-item {
+    background-color: rgb(46, 48, 48);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(241, 232, 232, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.cert-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.cert-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+    color: white;
+}
+
